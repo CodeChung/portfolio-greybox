@@ -1,0 +1,145 @@
+
+
+/* header */
+
+header {
+    float: left;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+
+header ul {
+   list-style: none;
+   padding: 0;
+}
+
+header ul li {
+    padding: 20px;
+    font-size: 25px; 
+    transition: font-size 1s ease 0s, font-weight 0.5s ease 0s;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+a:hover:before {
+    width:100%;
+    right: 0;
+    transition: width 0.5s ease 0s, right 0.5s ease 0s;
+}
+a:before {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    right: 0;
+    position: absolute;
+    background: #2F74D0;
+    width: 0;
+    transition: width 1s ease 0s, right 0.5s ease 0s;
+}
+
+.current {
+    font-size: 30px;
+    font-weight: 700;
+    transition: font-size 1s ease 0s, font-weight 0.5s ease 0s;
+}
+
+/* body */
+
+main {
+    float: right;
+    width: 80%;
+}
+/* bio */
+
+section {
+    width: 100%;
+    font-size: 20px;
+    color: #00072D;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.intro {
+    background: lightgrey;
+}
+
+/* projects */
+
+.projects {
+    background: lightslategray;
+}
+
+.project-card {
+    width: 65%;
+    background: #FFF;
+    border: #eee 1px solid;
+    border-radius: 2px;
+    margin: 0 auto;
+    height: 60vh;
+
+}
+.project-img {
+    height: 40vh;
+    border: 1px solid black;
+}
+
+/* about */
+
+.about {
+    background:grey;
+}
+.about p {
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* contact */
+
+.contact {
+    text-align: center;
+    background: darkgrey;
+}
+
+.contact-links i {
+    font-size: 40px;
+    color: black;
+    padding: 10px;
+}
+@media (max-width: 767.98px) { 
+    header {
+        float: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: auto;
+        background: white;
+    } 
+    header ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+    .current {
+        font-size: 25px;
+    }
+    main {
+        float: none;
+        width: 100%;
+    }
+}
